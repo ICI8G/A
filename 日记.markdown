@@ -89,3 +89,73 @@ Pool类：https://blog.csdn.net/liuxingen/article/details/72605343
 
 重学数据结构，以java作为主要语言
 
+
+## 2021.9.7
+尝试用爬虫登录学校教务处
+发现有加密post
+主要参数有：
+{
+"rsa"：通过strEnc函数加密,
+"ul":账号和密码的个数,,
+"pl"：账号和密码的个数,
+"execution"：直接看网页源码能获得其值，
+"lt"：直接看网页源码能获得其值,
+"_eventid":固定值为"submit"
+}
+
+以及Cookie
+
+所以如何找到rsa和Cookie的值是关键
+通过打断点发现发起者是
+http://cas.shnu.edu.cn/cas/comm/js/login10.js
+
+相关函数为：
+```
+function login(){
+	
+	var $u = $("#un") , $p=$("#pd");
+	var u = $u.val().trim();
+	if(u==""){
+		$u.focus();
+		$u.parent().addClass("login_error_border");
+		return ;
+	}
+	
+	var p = $p.val().trim();
+	if(p==""){
+		$p.focus();
+		$p.parent().addClass("login_error_border");
+		return ;
+	}
+	
+	$u.attr("disabled","disabled");
+	$p.attr("disabled","disabled");
+	
+	//防止记录错误密码，每次要刷新记住的密码
+	if($("#rememberName").is(":checked")){
+		//不等于空，写cookie
+		setCookie('neusoft_cas_un' , u , 7);
+		setCookie('neusoft_cas_pd' , strEnc(p,'neusoft','cas','pd') , 7);
+	}
+	
+	var lt = $("#lt").val();
+	
+	$("#ul").val(u.length);
+	$("#pl").val(p.length);
+	$("#rsa").val(strEnc(u+p+lt , '1' , '2' , '3'));
+	$("#loginForm")[0].submit();
+	
+}
+```
+
+```
+//设置cookie
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+```
+
+
