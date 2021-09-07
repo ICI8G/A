@@ -327,3 +327,25 @@ function strEnc(data, firstKey, secondKey, thirdKey) {
 
 相关库：PyExecJS
 
+最后在抓包中发现需重定向三次，最后请求主页面
+其中后两位分别需要额外参数：jessionid和ticket
+但在写脚本的过程中发现，关于ticket的参数可有可无，并不清楚为什么
+
+而，jessionid是必须的
+
+关于jeesionid的描述：https://blog.csdn.net/Q176782/article/details/52267507?utm_source=itdadao&utm_medium=referral
+
+所以
+整体思路为：
+1.在第一次请求时获得相关加密参数和jessionid
+2.提交表单，同时在请求请求头中加入cookie（与jessionid相关）
+3.请求重定向，请求主页面
+
+PS:在3这个过程中，我不清楚是不是要请求重定向，但是在抓包的过程中，浏览器是这么做的，所以我照写了
+
+学校的网站不允许过快点击，即多进程爬虫高并发可行性不大？
+
+以及，由于学校抢课使用虚拟币投币制，所以此脚本作用不大？
+但是仍能为量化评价打下基础
+
+脚本相关文件夹：
