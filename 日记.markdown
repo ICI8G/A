@@ -96,7 +96,7 @@ Pool类：https://blog.csdn.net/liuxingen/article/details/72605343
 发现有加密post
 
 主要参数有：
-
+```
 {
 "rsa"：通过strEnc函数加密,
 "ul":账号和密码的个数,,
@@ -105,7 +105,7 @@ Pool类：https://blog.csdn.net/liuxingen/article/details/72605343
 "lt"：直接看网页源码能获得其值,
 "_eventid":固定值为"submit"
 }
-
+```
 以及Cookie
 
 所以如何找到rsa和Cookie的值是关键
@@ -161,4 +161,169 @@ function setCookie(cname, cvalue, exdays) {
 }
 ```
 
+通过去全局搜索发现strEnc()在http://cas.shnu.edu.cn/cas/comm/js/des.js
+函数为：
+```
+function strEnc(data, firstKey, secondKey, thirdKey) {
+
+    var leng = data.length;
+    var encData = "";
+    var firstKeyBt, secondKeyBt, thirdKeyBt, firstLength, secondLength, thirdLength;
+    if (firstKey != null && firstKey != "") {
+        firstKeyBt = getKeyBytes(firstKey);
+        firstLength = firstKeyBt.length;
+    }
+    if (secondKey != null && secondKey != "") {
+        secondKeyBt = getKeyBytes(secondKey);
+        secondLength = secondKeyBt.length;
+    }
+    if (thirdKey != null && thirdKey != "") {
+        thirdKeyBt = getKeyBytes(thirdKey);
+        thirdLength = thirdKeyBt.length;
+    }
+
+    if (leng > 0) {
+        if (leng < 4) {
+            var bt = strToBt(data);
+            var encByte;
+            if (firstKey != null && firstKey != "" && secondKey != null && secondKey != "" && thirdKey != null && thirdKey != "") {
+                var tempBt;
+                var x, y, z;
+                tempBt = bt;
+                for (x = 0; x < firstLength; x++) {
+                    tempBt = enc(tempBt, firstKeyBt[x]);
+                }
+                for (y = 0; y < secondLength; y++) {
+                    tempBt = enc(tempBt, secondKeyBt[y]);
+                }
+                for (z = 0; z < thirdLength; z++) {
+                    tempBt = enc(tempBt, thirdKeyBt[z]);
+                }
+                encByte = tempBt;
+            } else {
+                if (firstKey != null && firstKey != "" && secondKey != null && secondKey != "") {
+                    var tempBt;
+                    var x, y;
+                    tempBt = bt;
+                    for (x = 0; x < firstLength; x++) {
+                        tempBt = enc(tempBt, firstKeyBt[x]);
+                    }
+                    for (y = 0; y < secondLength; y++) {
+                        tempBt = enc(tempBt, secondKeyBt[y]);
+                    }
+                    encByte = tempBt;
+                } else {
+                    if (firstKey != null && firstKey != "") {
+                        var tempBt;
+                        var x = 0;
+                        tempBt = bt;
+                        for (x = 0; x < firstLength; x++) {
+                            tempBt = enc(tempBt, firstKeyBt[x]);
+                        }
+                        encByte = tempBt;
+                    }
+                }
+            }
+            encData = bt64ToHex(encByte);
+        } else {
+            var iterator = parseInt(leng / 4);
+            var remainder = leng % 4;
+            var i = 0;
+            for (i = 0; i < iterator; i++) {
+                var tempData = data.substring(i * 4 + 0, i * 4 + 4);
+                var tempByte = strToBt(tempData);
+                var encByte;
+                if (firstKey != null && firstKey != "" && secondKey != null && secondKey != "" && thirdKey != null && thirdKey != "") {
+                    var tempBt;
+                    var x, y, z;
+                    tempBt = tempByte;
+                    for (x = 0; x < firstLength; x++) {
+                        tempBt = enc(tempBt, firstKeyBt[x]);
+                    }
+                    for (y = 0; y < secondLength; y++) {
+                        tempBt = enc(tempBt, secondKeyBt[y]);
+                    }
+                    for (z = 0; z < thirdLength; z++) {
+                        tempBt = enc(tempBt, thirdKeyBt[z]);
+                    }
+                    encByte = tempBt;
+                } else {
+                    if (firstKey != null && firstKey != "" && secondKey != null && secondKey != "") {
+                        var tempBt;
+                        var x, y;
+                        tempBt = tempByte;
+                        for (x = 0; x < firstLength; x++) {
+                            tempBt = enc(tempBt, firstKeyBt[x]);
+                        }
+                        for (y = 0; y < secondLength; y++) {
+                            tempBt = enc(tempBt, secondKeyBt[y]);
+                        }
+                        encByte = tempBt;
+                    } else {
+                        if (firstKey != null && firstKey != "") {
+                            var tempBt;
+                            var x;
+                            tempBt = tempByte;
+                            for (x = 0; x < firstLength; x++) {
+                                tempBt = enc(tempBt, firstKeyBt[x]);
+                            }
+                            encByte = tempBt;
+                        }
+                    }
+                }
+                encData += bt64ToHex(encByte);
+            }
+            if (remainder > 0) {
+                var remainderData = data.substring(iterator * 4 + 0, leng);
+                var tempByte = strToBt(remainderData);
+                var encByte;
+                if (firstKey != null && firstKey != "" && secondKey != null && secondKey != "" && thirdKey != null && thirdKey != "") {
+                    var tempBt;
+                    var x, y, z;
+                    tempBt = tempByte;
+                    for (x = 0; x < firstLength; x++) {
+                        tempBt = enc(tempBt, firstKeyBt[x]);
+                    }
+                    for (y = 0; y < secondLength; y++) {
+                        tempBt = enc(tempBt, secondKeyBt[y]);
+                    }
+                    for (z = 0; z < thirdLength; z++) {
+                        tempBt = enc(tempBt, thirdKeyBt[z]);
+                    }
+                    encByte = tempBt;
+                } else {
+                    if (firstKey != null && firstKey != "" && secondKey != null && secondKey != "") {
+                        var tempBt;
+                        var x, y;
+                        tempBt = tempByte;
+                        for (x = 0; x < firstLength; x++) {
+                            tempBt = enc(tempBt, firstKeyBt[x]);
+                        }
+                        for (y = 0; y < secondLength; y++) {
+                            tempBt = enc(tempBt, secondKeyBt[y]);
+                        }
+                        encByte = tempBt;
+                    } else {
+                        if (firstKey != null && firstKey != "") {
+                            var tempBt;
+                            var x;
+                            tempBt = tempByte;
+                            for (x = 0; x < firstLength; x++) {
+                                tempBt = enc(tempBt, firstKeyBt[x]);
+                            }
+                            encByte = tempBt;
+                        }
+                    }
+                }
+                encData += bt64ToHex(encByte);
+            }
+        }
+    }
+    return encData;
+}
+```
+
+但是 https://zhuanlan.zhihu.com/p/58554106 给了一个很好的思路，虽然自定义函数很多，但是可以直接使用js文件，省了很多心
+
+相关库：PyExecJS
 
