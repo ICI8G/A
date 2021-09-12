@@ -359,3 +359,14 @@ PS:在3这个过程中，我不清楚是不是要请求重定向，但是在抓�
 但是仍能为量化评价打下基础
 
 脚本相关文件夹：[SHNU](SHNU)
+
+
+
+
+## 2021.9.12
+
+今天发现VScode CPU占有率特别高，通过搜索可以用
+
+https://github.com/Microsoft/vscode/wiki/Performance-Issues#consuming-cpu
+
+中提供的方法去检查，最后暂时关闭了全部插件，仅开启了要用的插件暂时解决了cpu占用高的问题，在以后开启其他时可以排查
