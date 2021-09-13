@@ -419,7 +419,7 @@ https://github.com/Microsoft/vscode/wiki/Performance-Issues#consuming-cpu
 
 ## 2021.9.13
 
-### 关于泛型问题
+### 关于Object&&泛型&&通配符问题
 一直对到底是Object类、<T>还是<?>有疑惑，在这里找到了解答：
 
 https://www.renfei.net/posts/1003341
