@@ -415,6 +415,14 @@ https://github.com/Microsoft/vscode/wiki/Performance-Issues#consuming-cpu
 但是会提示警告："Type safety: Unchecked cast from Object to T"，暂时不清楚解决方法
 
 
+**注：在之后2021.9.13中发现原先没有错误，返回类型是正确的**
+
+**因为之前对于书《Head First Java 第二版》里P215里ArryList<Object>就意味着他将引用变量的类型固定为Object**
+	
+**而我的代码插入的时候是将对象插入Object数组里，自然不会有问题**
+	
+	
+
 
 
 ## 2021.9.13
@@ -424,3 +432,9 @@ https://github.com/Microsoft/vscode/wiki/Performance-Issues#consuming-cpu
 
 https://www.renfei.net/posts/1003341
 
+
+### 尝试实现了能存放任何类型的栈的思路：
+
+代码：
+
+主要是Object类型的多态以及自动拆装包的机制
