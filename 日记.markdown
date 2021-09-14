@@ -435,6 +435,13 @@ https://www.renfei.net/posts/1003341
 
 ### 尝试实现了能存放任何类型的栈的思路：
 
-代码：
+[LinkedStack.java](Code/Stack/LinkedStack.java)
 
 主要是Object类型的多态以及自动拆装包的机制
+
+
+
+## 2021.9.14
+
+### 对比字符串
+在C家族里字符串是以'\0'作为结束字符，而在Java中字符串是String类的对象，所以不是以'\0'作为结束的标志
