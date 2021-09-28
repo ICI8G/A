@@ -445,3 +445,21 @@ https://www.renfei.net/posts/1003341
 
 ### 对比字符串
 在C家族里字符串是以'\0'作为结束字符，而在Java中字符串是String类的对象，所以不是以'\0'作为结束的标志
+
+
+
+## 2021.9.26
+
+### smtp
+学习到计算机网络的smtp  尝试使用smtp 登录学校邮件服务器 发送邮件
+
+相关连接：
+
+https://jingyan.baidu.com/article/72ee561a99ea0ba06038df7d.html
+https://blog.csdn.net/weixin_38264524/article/details/71024433
+
+前提 ：  打开win10系统中的 smtp 服务
+
+结果：成功发送 如下图所示
+
+POP3的结果如下
