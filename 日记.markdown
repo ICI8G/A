@@ -480,7 +480,9 @@ https://www.sky350.com/374.html
 
 具体做法参考：
 1.购买国外服务器（推荐美国服务器，其他的反而卡），我用的是vulter
+
 2.使用putty远程连接服务器//注：在输入登录密码的时候不显示密码的，并不是卡，另外黏贴不是ctrl+v而是鼠标右键
+
 3.按照第一条参考连接配置服务器v2ray服务端
 - 具体指令有：1
 	- 1.v2ray一键脚本安装：``bash <(curl -sL https://raw.githubusercontent.com/hijkpw/scripts/master/goV2.sh)``
