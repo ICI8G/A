@@ -474,11 +474,13 @@ POP3的结果如下
 通过国外服务器和v2ray实现
 
 参考链接：
+
 http://www.ubuntu520.com/v2ray-vps-vultr-https-tls.html
 
 https://www.sky350.com/374.html
 
 具体做法参考：
+
 1.购买国外服务器（推荐美国服务器，其他的反而卡），我用的是vulter
 
 2.使用putty远程连接服务器//注：在输入登录密码的时候不显示密码的，并不是卡，另外黏贴不是ctrl+v而是鼠标右键
