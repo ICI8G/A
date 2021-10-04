@@ -470,6 +470,7 @@ POP3的结果如下
 ## 2021.10.4
 
 ### 翻墙
+
 如何翻墙？
 通过国外服务器和v2ray实现
 
@@ -487,24 +488,25 @@ https://www.sky350.com/374.html
 
 3.按照第一条参考连接配置服务器v2ray服务端
 
-具体指令有：
+- 具体指令有：
+  - 1.v2ray一键脚本安装：``bash <(curl -sL https://raw.githubusercontent.com/hijkpw/scripts/master/goV2.sh)``
 
-	- 1.v2ray一键脚本安装：``bash <(curl -sL https://raw.githubusercontent.com/hijkpw/scripts/master/goV2.sh)``
+  - 2.开放端口：``ufw allow 1234/tcp //这里的1234改成你的端口``
 
-	- 2.开放端口：``ufw allow 1234/tcp //这里的1234改成你的端口``
+  - 3.开启v2ray:
 
-	- 3.开启v2ray:
+    - ``systemctl enable v2ray``
 
-		- ``systemctl enable v2ray``
-
-		- ``systemctl start v2ray``
+    - ``systemctl start v2ray``
 
 4.使用v2rayN客户端
 
-	- 1.添加Vmess服务器，配置好信息//若不记得端口、id等可以在服务器上输入:``cat /etc/v2ray/config.json``来查看
+- 具体操作：
 
-	- 2.将刚刚的服务器设置为活动服务器
+  - 1.添加Vmess服务器，配置好信息//若不记得端口、id等可以在服务器上输入:``cat /etc/v2ray/config.json``来查看
 
-	- 3.在任务栏图标右键打开系统代理选项，选择自动配置系统代理，即可完成代理进行翻墙//我的自动配置配置在了chrome游览器上
+  - 2.将刚刚的服务器设置为活动服务器
 
-	- 4.注：如果没有路由这个选项，可以在界面打开设置-高级设置中找到，但实测下来无论是全局还是绕过大陆都能翻墙
+  - 3.在任务栏图标右键打开系统代理选项，选择自动配置系统代理，即可完成代理进行翻墙//我的自动配置配置在了chrome游览器上
+
+  - 4.注：如果没有路由这个选项，可以在界面打开设置-高级设置中找到，但实测下来无论是全局还是绕过大陆都能翻墙
