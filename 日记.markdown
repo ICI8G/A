@@ -487,7 +487,7 @@ https://www.sky350.com/374.html
 
 3.按照第一条参考连接配置服务器v2ray服务端
 
-具体指令有：1
+具体指令有：
 	- 1.v2ray一键脚本安装：``bash <(curl -sL https://raw.githubusercontent.com/hijkpw/scripts/master/goV2.sh)``
 	- 2.开放端口：``ufw allow 1234/tcp //这里的1234改成你的端口``
 	- 3.开启v2ray:
