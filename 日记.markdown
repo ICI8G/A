@@ -519,7 +519,7 @@ https://www.sky350.com/374.html
 
 ![服务器代码](Code/UDP/UDPServer.py)
 
-![客户端代码](Code/UDP/UDPCilent.py)
+![客户端代码](Code/UDP/UDPClient.py)
 
 
 效果图：
@@ -537,3 +537,5 @@ https://www.sky350.com/374.html
 	- 2.程序还是写的有问题hhhh
 
 3.关于中文的发送：在解码和编码时使用GB2312编码即可
+
+4.换成TCP可能稳定性会好点
