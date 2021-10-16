@@ -559,6 +559,7 @@ https://www.bilibili.com/video/BV1554y1n7zv?from=search&seid=9269282891209665392
 实验发现ettercap进行网关和受害者的双向欺骗并不成功，在同样的配置下使用arpspoof却成功了，但仍抓了个寂寞
 
 但是，如果arp欺骗，那么使用arpspoof是成功的，在关闭路由转发后，使受害者发不出去/接收不到包导致断网
+
 ```
 语法arpspoof [-i interface] [-c own|host|both] [-t target] [-r] host
 参数-i interface 指定要使用的接口。
@@ -567,7 +568,7 @@ https://www.bilibili.com/video/BV1554y1n7zv?from=search&seid=9269282891209665392
 -r 毒害两个主机(主机和目标)以捕获两个方向的流量。(仅对-t有效)
 host 指定您希望拦截数据包的host(通常是本地网关)
 示例 arpspoof -i eth0 -t 192.168.1.100 192.168.1.1 //eth0为攻击者使用的网卡 192.168.1.100为攻击目标的IP  192.168.1.1为攻击目标的网关
-``
+```
 
 注：测试完后记得关闭转发，不然会发生整个网段dns数据大量冗余，导致整个网络无法上网。
 
