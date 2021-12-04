@@ -26,7 +26,7 @@ https://blog.csdn.net/m0_37845735/article/details/109300175#1%E3%80%81%E6%96%87%
 
 三层配置图:
 
-<img src="/Pics/文件系统的三层配置.png" />
+<img src="/Pics/文件系统的三层配置.png style="zoom: 50%;" />
 
 
 
