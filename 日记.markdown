@@ -4,7 +4,7 @@
 
 
 
-## 2021.8.26
+# 2021.8.26
 
 之前一直在学习爬虫，作为小技能办事，也能理解计算机网络相关知识
 
@@ -14,7 +14,7 @@
 
 
 
-#### 第15章
+### 第15章
 
 使用了python的multiprocessing模块
 
@@ -46,13 +46,12 @@ Pool类：https://blog.csdn.net/liuxingen/article/details/72605343
 
 
 
-#### 第16章
+### 第16章
 
 略
 
 
-
-#### 第17章
+### 第17章
 
 代理池：https://cuiqingcai.com/7048.html
 
@@ -61,19 +60,19 @@ Pool类：https://blog.csdn.net/liuxingen/article/details/72605343
 
 
 
-#### 第18章
+### 第18章
 
 需要登录的：抓包获得Cookie（如果不是动态的话
 
 
 
-#### 第19章
+### 第19章
 
 图片验证码：教程使用orc处理图片并识别，个人认为使用opencv处理图片后使用orc识别会好很多
 
 
 
-#### 第20章
+### 第20章
 
 滑块验证：
 
@@ -85,12 +84,12 @@ Pool类：https://blog.csdn.net/liuxingen/article/details/72605343
 
 
 
-## 2021.8.30
+# 2021.8.30
 
 重学数据结构，以java作为主要语言
 
 
-## 2021.9.7
+# 2021.9.7
 尝试用爬虫登录学校教务处
 
 发现有加密post
@@ -363,10 +362,10 @@ PS:在3这个过程中，我不清楚是不是要请求重定向，但是在抓�
 
 
 
-## 2021.9.12
+# 2021.9.12
 
 
-### VSCode CPU占用率高
+## VSCode CPU占用率高
 今天发现VScode CPU占有率特别高，通过搜索可以用
 
 https://github.com/Microsoft/vscode/wiki/Performance-Issues#consuming-cpu
@@ -374,7 +373,7 @@ https://github.com/Microsoft/vscode/wiki/Performance-Issues#consuming-cpu
 中提供的方法去检查，最后暂时关闭了全部插件，仅开启了要用的插件暂时解决了cpu占用高的问题，在以后开启其他时可以排查
 
 
-### 纠察之前SeqList.java的错误
+## 纠察之前SeqList.java的错误
 
 之前写的代码（部分）为：
 ```
@@ -425,15 +424,15 @@ https://github.com/Microsoft/vscode/wiki/Performance-Issues#consuming-cpu
 
 
 
-## 2021.9.13
+# 2021.9.13
 
-### 关于Object&&泛型&&通配符问题
+## 关于Object&&泛型&&通配符问题
 一直对到底是Object类、<T>还是<?>有疑惑，在这里找到了解答：
 
 https://www.renfei.net/posts/1003341
 
 
-### 尝试实现了能存放任何类型的栈的思路：
+## 尝试实现了能存放任何类型的栈的思路：
 
 [LinkedStack.java](Code/Stack/LinkedStack.java)
 
@@ -441,16 +440,16 @@ https://www.renfei.net/posts/1003341
 
 
 
-## 2021.9.14
+# 2021.9.14
 
-### 对比字符串
+## 对比字符串
 在C家族里字符串是以'\0'作为结束字符，而在Java中字符串是String类的对象，所以不是以'\0'作为结束的标志
 
 
 
-## 2021.9.26
+# 2021.9.26
 
-### smtp
+## smtp
 学习到计算机网络的smtp  尝试使用smtp 登录学校邮件服务器 发送邮件
 
 相关连接：
@@ -467,9 +466,9 @@ POP3的结果如下
 ![](Pic/pop3.jpg)
 
 
-## 2021.10.4
+# 2021.10.4
 
-### 翻墙
+## 翻墙
 
 如何翻墙？
 通过国外服务器和v2ray实现
@@ -481,7 +480,7 @@ http://www.ubuntu520.com/v2ray-vps-vultr-https-tls.html
 https://www.sky350.com/374.html
 
 
-#### 现在做法
+### 现在做法（2021.12.4）
 
 连接服务器后输入
 
@@ -495,7 +494,7 @@ https://www.sky350.com/374.html
 
 
 
-#### 废案
+### 废案
 
 具体做法参考：
 
@@ -529,9 +528,9 @@ https://www.sky350.com/374.html
   - 4.注：如果没有路由这个选项，可以在界面打开设置-高级设置中找到，但实测下来无论是全局还是绕过大陆都能翻墙
 
 
-## 2021.10.8
+# 2021.10.8
 
-### UDP服务器与客户端
+## UDP服务器与客户端
 
 [服务器代码](Code/UDP/UDPServer.py)
 
@@ -557,9 +556,9 @@ https://www.sky350.com/374.html
 4.换成TCP可能稳定性会好点
 
 
-## 2021.10.17
+# 2021.10.17
 
-### 双系统 ---- 安装ubuntu
+## 双系统 ---- 安装ubuntu
 
 具体教程可以参考b站保姆级视频：
 
@@ -568,7 +567,7 @@ https://www.bilibili.com/video/BV1554y1n7zv?from=search&seid=9269282891209665392
 十分详细和具体
 
 
-### arp欺骗
+## arp欺骗
 
 在安装完ubuntu后下载了wireshark和ettercap尝试中间人攻击
 
@@ -604,29 +603,29 @@ host 指定您希望拦截数据包的host(通常是本地网关)
 
 
 
-## 2021.11.9
+# 2021.11.9
 
-### 混合开发----flutter初试
+## 混合开发----flutter初试
 
 不建议使用Android Studio，我的电脑太卡了使用起来，个人使用的是VSCODE配置环境，具体网上都有教程。
 
-### 关于真机/虚拟机的选择
+## 关于真机/虚拟机的选择
 
 尝试了一下午AS自带的AVD虚拟机没成功，最后使用的是真机和vscode的组合，算是放弃了使用AS。
 
 //明天会尝试使用tc或者网易等虚拟机
 
-### 关于Gradle太慢的问题
+## 关于Gradle太慢的问题
 
 在网上能得到答案（改用国内镜像源）
 
 
 
-## 2021.11.29
+# 2021.11.29
 
 补记
 
-### 上师大的量化评价脚本（使用代理和自动化技术）
+## 上师大的量化评价脚本（使用代理和自动化技术）
 
 [量化评教脚本](SHNU/selenium)
 
@@ -638,12 +637,12 @@ host 指定您希望拦截数据包的host(通常是本地网关)
 
 
 
-## 2021.12.4
+# 2021.12.4
 
-### 解决不能翻墙问题
+## 解决不能翻墙问题
 
 最近总是翻不了墙，一开始因为是端口被墙了，排查一圈发现是安装v2ray一键脚本的源的作者被请请喝茶了，换了个源就好了，具体的已在之前的翻墙说明中更新
 
-### 使用STM32F407 EXPLORER 实现一个小型网站的范例的保姆级教程
+## 使用STM32F407 EXPLORER 实现一个小型网站的范例的保姆级教程
 
 相关连接:[webnet](WebNet/)
