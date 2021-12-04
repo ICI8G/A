@@ -480,6 +480,23 @@ http://www.ubuntu520.com/v2ray-vps-vultr-https-tls.html
 
 https://www.sky350.com/374.html
 
+
+#### 现在做法
+
+连接服务器后输入
+
+连接配置服务器v2ray服务端
+
+输入``bash <(curl -Ls https://raw.githubusercontent.com/luciferkids/hijkpw-scripts/main/ubuntu_install_v2ray.sh)``安装一键脚本
+
+选择端口
+
+按配置填写v2ray客户端，代理即可
+
+
+
+#### 废案
+
 具体做法参考：
 
 1.购买国外服务器（推荐美国服务器，其他的反而卡），我用的是vulter，选择云服务器最便宜的就行，美国有些州有$2.5/month的选择，系统选择的是ubuntu 系统20.10 x64//最高系统似乎执行不了下面的指令
@@ -510,7 +527,6 @@ https://www.sky350.com/374.html
   - 3.在任务栏图标右键打开系统代理选项，选择自动配置系统代理，即可完成代理进行翻墙//我的自动配置配置在了chrome游览器上
 
   - 4.注：如果没有路由这个选项，可以在界面打开设置-高级设置中找到，但实测下来无论是全局还是绕过大陆都能翻墙
-
 
 
 ## 2021.10.8
@@ -619,3 +635,15 @@ host 指定您希望拦截数据包的host(通常是本地网关)
 ### 遗传算法玩具
 
 [genetic_drawing](https://github.com/anopara/genetic-drawing)
+
+
+
+## 2021.12.4
+
+### 解决不能翻墙问题
+
+最近总是翻不了墙，一开始因为是端口被墙了，排查一圈发现是安装v2ray一键脚本的源的作者被请请喝茶了，换了个源就好了，具体的已在之前的翻墙说明中更新
+
+### 使用STM32F407 EXPLORER 实现一个小型网站的范例的保姆级教程
+
+相关连接:[webnet](WebNet/)
