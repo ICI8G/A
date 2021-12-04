@@ -33,20 +33,19 @@ https://blog.csdn.net/m0_37845735/article/details/109300175#1%E3%80%81%E6%96%87%
 ##### 1.组件：
 
 - DFS： 
-- 
-   <img src="/Pics/DFS.jpg" style="zoom: 50%;" />
+   <img src="Pics/DFS.jpg" style="zoom: 50%;" />
 
    需使能FatFs
 
 - FatFs:
 
-   <img src="/Pics/FatFs.jpg" style="zoom: 50%;" />
+   <img src="Pics/FatFs.jpg" style="zoom: 50%;" />
 
 **注意：对于我这块W25Q128，设置的处理的最大扇区大小应设置为4096**
 
 - SFUD
 
-<img src="/Pics/SFUD.jpg" style="zoom:50%;" />
+<img src="Pics/SFUD.jpg" style="zoom:50%;" />
 
 开启后不做需改,开启后的同时会开启SPI的配置，也不勾选其他什么选项
 
@@ -54,7 +53,7 @@ https://blog.csdn.net/m0_37845735/article/details/109300175#1%E3%80%81%E6%96%87%
 
 - Fal
 
-  <img src="/Pics/Fal.jpg" style="zoom: 50%;" />
+  <img src="Pics/Fal.jpg" style="zoom: 50%;" />
 
 **需打开 FAL使用SFUD驱动程序选择**
 
@@ -174,7 +173,7 @@ rt_kprintf("spi flash mount to /spi failed !\n");
 
 成功后应该看到的代码
 
-<img src="/Pics/开机.jpg" style="zoom:67%;" />
+<img src="Pics/开机.jpg" style="zoom:67%;" />
 
 之后finsh使用``list_device``命令
 
@@ -224,7 +223,7 @@ finsh命令输入``webnet_test``
 
 此时，访问服务器能出现例程samples的index网页
 
-![](/Pics/index_html.jpg)
+![](Pics/index_html.jpg)
 
 到此，例程的配置成功
 
