@@ -97,10 +97,10 @@ https://blog.csdn.net/m0_37845735/article/details/109300175#1%E3%80%81%E6%96%87%
 
 - IWIP
 
-  <img src="Pics/IWIP_1.JPG" style="zoom:50%;" />
+  <img src="Pics/IWIP_1.jpg" style="zoom:50%;" />
   
 
-  <img src="Pics/IWIP_2.JPG" style="zoom:50%;" />
+  <img src="Pics/IWIP_2.jpg" style="zoom:50%;" />
 
   **1.关闭DHCP（因为这次使用交叉接线，不需要动态分配）**
 
