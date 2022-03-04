@@ -1,6 +1,6 @@
 # 桌面辅助GUI
 
-## 打包的exe 在 release里
+打包的exe 在 release里
 
 
  ## 目的
