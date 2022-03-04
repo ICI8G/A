@@ -1,6 +1,6 @@
 # 桌面辅助GUI
 
-打包的exe在release里
+打包的exe在初物语.7z
 
 
  ## 目的
