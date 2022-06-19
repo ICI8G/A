@@ -460,10 +460,10 @@ https://blog.csdn.net/weixin_38264524/article/details/71024433
 前提 ：  打开win10系统中的 smtp 服务
 
 结果：成功发送 如下图所示
-![](/Pic/smtp.jpg)
+![](Pic/smtp.jpg)
 
 POP3的结果如下
-![](/Pic/pop3.jpg)
+![](Pic/pop3.jpg)
 
 
 # 2021.10.8
@@ -477,7 +477,7 @@ POP3的结果如下
 
 效果图：
 
-![](/Pic/UDP.jpg)
+![](Pic/UDP.jpg)
 
 总结：
 
